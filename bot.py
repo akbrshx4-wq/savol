@@ -23,10 +23,10 @@ def start(message):
 # Tugmalar
 @bot.message_handler(func=lambda m: True)
 def answer(message):
-    if message.text == "🚗 Oldi-sotdi":
+    if message.text == "🚗 Avtomashina oldi-sotdi shartnomasi":
         bot.send_message(message.chat.id,
-                         "🚗 Oldi-sotdi hujjati uchun kerak bo‘ladi:\n"
-                         "- Pasport\n- Tex pasport\n"
+                         "🚗 Oldi-sotdi shartnomasi uchun kerakli bo'lgan hujjatlar:\n"
+                         "- Taraflarning shaxsini tasdiqlovchi hujjatlar asli(pasport yoki uning o'rnini bosuvchi hujjatlar\n- Mulk egalarining nikoh guvohnomasi yoki nikoh shartnomasi\n- Transport vositasini qayd etish guvohnomasi(texnik pasport)\n"
                          "- Davlat boji: 500 000 so‘m\n"
                          "👉 Notarius: Dadajon aka")
     elif message.text == "🏠 Kadastr":
@@ -56,4 +56,5 @@ def webhook():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
 
