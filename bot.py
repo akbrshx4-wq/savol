@@ -26,7 +26,7 @@ def start(message):
     )
 
 # Avtomashina shartnomasi
-@bot.message_handler(func=lambda m: m.text == "🚗 Автомашина олди сотди шартномаси расмийлаштириш")
+@bot.message_handler(func=lambda m: m.text == "🚗 Авто о/с шарт расмийлаштириш")
 def avtomashina(message):
     bot.send_message(message.chat.id,
     """🚗 Автомашина олди сотди шартномаси расмийлаштириш учун керак бўлган хужжатлар:
@@ -104,5 +104,6 @@ def webhook():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
 
 
