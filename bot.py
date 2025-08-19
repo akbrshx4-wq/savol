@@ -14,7 +14,7 @@ app = Flask(__name__)
 @bot.message_handler(commands=['start'])
 def start(message):
    markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
-btn1 = telebot.types.KeyboardButton("🚗 Avtomashina\nOldi-sotdi")
+btn1 = telebot.types.KeyboardButton("🚗 Avtomashina Oldi-sotdi")
 btn2 = telebot.types.KeyboardButton("🏠 Kadastr")
 btn3 = telebot.types.KeyboardButton("🎁 Hadya")
 markup.add(btn1, btn2, btn3)
@@ -26,7 +26,7 @@ bot.send_message(
 )
 
                     # Avtomashina shartnomasi
-                    @bot.message_handler(func=lambda m: m.text == "🚗 Avtomashina\nOldi-sotdi")
+                    @bot.message_handler(func=lambda m: m.text == "🚗 Avtomashina Oldi-sotdi")
                     def avtomashina(message):
                         bot.send_message(message.chat.id,
                         """🚗 Oldi-sotdi shartnomasi uchun kerakli bo'lgan hujjatlar:
@@ -80,6 +80,7 @@ def webhook():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
 
 
 
