@@ -27,12 +27,13 @@ def start(message):
     btn11 = telebot.types.KeyboardButton("🏦 Ипотека шартномаси расмийлаштириш")
     btn12 = telebot.types.KeyboardButton("📜 Васиятнома расмийлаштириш")
 
-    markup.add(btn1, btn2)
-    markup.add(btn3)
-    markup.add(btn4, btn5)
-    markup.add(btn6, btn7)
-    markup.add(btn8)
-
+    markup.row(btn1, btn2)
+    markup.row(btn3, btn4)
+    markup.row(btn5, btn6)
+    markup.row(btn7, btn8)
+    markup.row(btn9, btn10)
+    markup.row(btn11, btn12)
+    
     bot.send_message(
         message.chat.id,
         "Ассалому алайкум қайси хизматимиз керак?",
@@ -509,6 +510,7 @@ def webhook():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
 
 
 
