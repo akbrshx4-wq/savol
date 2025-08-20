@@ -16,12 +16,16 @@ def start(message):
     markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
     btn1 = telebot.types.KeyboardButton("🚗 Авто о/с шарт расмийлаштириш")
     btn2 = telebot.types.KeyboardButton("🎁 Авто хадя шарт расмийлаштириш")
-    btn3 = telebot.types.KeyboardButton("🏠 Квартира о/с шарт расмийлаштириш")
-    btn4 = telebot.types.KeyboardButton("🏢 Авто т\э учун ишончнома")
-    btn5 = telebot.types.KeyboardButton("📄 Васият мерос расмилаштириш")
-    btn6 = telebot.types.KeyboardButton("📑 Ариза ёзиш")
-    btn7 = telebot.types.KeyboardButton("⚖️ Суд қарорини расмийлаштириш")
-    btn8 = telebot.types.KeyboardButton("🧾 Солиқ тўловлар текшириш")
+    btn3 = telebot.types.KeyboardButton("🏠 Кўчмас мулк о/с шарт расмийлаштириш")
+    btn4 = telebot.types.KeyboardButton("🏠 Кўчмас мулк ҳадя шарт расмийлаштириш")
+    btn5 = telebot.types.KeyboardButton("🏢 Авто ишончнома расмийлаштириш")
+    btn6 = telebot.types.KeyboardButton("🏢 Кўчмас мулк ишончнома расмийлаштириш")
+    btn7 = telebot.types.KeyboardButton("📄 Мерос гувоҳнома расмийлаштириш")
+    btn8 = telebot.types.KeyboardButton("📑 Турли ариза расмийлаштириш")
+    btn9 = telebot.types.KeyboardButton("📑 Турли ишончнома расмийлаштириш")
+    btn10 = telebot.types.KeyboardButton("⚖️ Гаров шартномаси расмийлаштириш")
+    btn11 = telebot.types.KeyboardButton("⚖️ Ипотека шартномаси расмийлаштириш")
+    btn12 = telebot.types.KeyboardButton("🧾 Васиятнома расмийлаштириш")
 
     markup.add(btn1, btn2)
     markup.add(btn3)
@@ -208,6 +212,7 @@ def webhook():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
 
 
 
